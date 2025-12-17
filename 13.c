@@ -20,8 +20,8 @@ double* y3(double x0, double h, int n) {
     double t = 0;
     x[0] = x0;
     for (int i = 0; i < n; i++) {
-        double t1 += h;
-        x[i+1] = x[i] / (1 + 2 * h * t1 * t1);
+        t += h;
+        x[i+1] = x[i] / (1 + 2 * h * t * t);
     }
     return x;
 }
@@ -43,3 +43,4 @@ int main() {
     return 0;
 
 }
+
